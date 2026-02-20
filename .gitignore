@@ -1,11 +1,9 @@
 # --- Simulation Data ---
 # We track the code, not the massive output files
 results/
+!results/.gitkeep
 archive/
 stored/
-
-# But don't ignore the .gitkeep file so the folder exists on clone
-!results/.gitkeep
 
 REPLAY_BUFFER/
 *.mp4
