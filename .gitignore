@@ -1,0 +1,30 @@
+# --- Simulation Data ---
+# We track the code, not the massive output files
+results/
+archive/
+stored/
+
+# But don't ignore the .gitkeep file so the folder exists on clone
+!results/.gitkeep
+
+REPLAY_BUFFER/
+*.mp4
+*.gif
+*.png
+*.csv
+
+# --- Python Environment & Cache ---
+__pycache__/
+*.py[cod]
+*$py.class
+.env
+.venv
+env/
+venv/
+.pytest_cache/
+
+# --- System & IDE ---
+.DS_Store
+.vscode/
+.idea/
+.ipynb_checkpoints/
