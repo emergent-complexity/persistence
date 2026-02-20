@@ -41,21 +41,31 @@ You merely set the constraints of the universe, let genesis happen, kick back an
    ```
 3. **Execution**: Once installed, you can run _Persistence_ using the default settings in different modes:
    * **Live Mode**: Includes real-time visuals of the simulation (slower).
-	 `> python main.py` 
+   ```bash
+   > python main.py
+   ```
    * **Headless Mode**: Simulation without visuals for efficient, high-speed data collection (faster).
-	 `> python main.py --headless`
+   ```bash
+   > python main.py --headless
+   ```
    Your run will be logged in a separate folder in the `results/` folder with all the necessary metadata to reproduce the run and the tracked longitudinal data about the agent populations.
 
-4. **Analysis**: Use the provided utilities to process the logged data from your run in the `results/` folder.
-   `> python utils/plot_results.py results/{your-run-folder}` 
+1. **Analysis**: Use the provided utilities to process the logged data from your run in the `results/` folder.
+   ```bash
+   > python utils/plot_results.py results/{your-run-folder}`
+   ```
    The generated plots will be saved in the same folder.
    
-5. **Rendering**: You can render high quality videos of your stored simulations in _Persistence_ provided you have `ffmpeg` installed on your system. Download it  [here](https://www.ffmpeg.org/download.html) if you do not have it installed. There are currently two modes of rendering videos,
+3. **Rendering**: You can render high quality videos of your stored simulations in _Persistence_ provided you have `ffmpeg` installed on your system. Download it  [here](https://www.ffmpeg.org/download.html) if you do not have it installed. There are currently two modes of rendering videos,
    
    * _Timelapse mode_: Allows you to render the entire simulation as a `.mp4` video based on a fixed frame render interval
-     `> python utils/render.py results/{your-run-folder} timelapse <field>`
+   ```bash
+   > python utils/render.py results/{your-run-folder} timelapse <field>
+   ```
    * _Event mode_: Allows you to render high resolution video of a specific event in the simulation,
-     `> python utils/render.py results/{your-run-folder} timelapse <field> [start step] [duration]` 
+   ```bash
+   > python utils/render.py results/{your-run-folder} timelapse <field> [start step] [duration]
+   ```
    The rendered videos will be saved in your run folder
 ---
 ## Developer's Manifesto
