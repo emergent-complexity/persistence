@@ -1,6 +1,6 @@
 # --- Simulation Data ---
 # We track the code, not the massive output files
-results/
+results/*
 !results/.gitkeep
 archive/
 stored/
