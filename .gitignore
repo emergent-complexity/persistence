@@ -8,7 +8,6 @@ stored/
 REPLAY_BUFFER/
 *.mp4
 *.gif
-*.png
 *.csv
 
 # --- Python Environment & Cache ---
