@@ -1,8 +1,8 @@
-# Persistence vAlpha: The Entropy Audit 🌀
+# Persistence vAlpha: The Entropy Audit 
 
 > **"Life is a temporary defiance of the Second Law. This is an appreciation of that defiance."**
 
-_Persistence_ is a high-fidelity Artificial Life (ALife) simulation engine built on the principles of non-equilibrium thermodynamics. Unlike traditional simulations that treat agents as abstract entities, Persistence treats life as a dissipative structure -a temporary pattern of matter that must constantly harvest energy and export entropy to survive. Individual agents in _Persistence_ will inevitably perish but life as a whole still tries to **persist**. In this universe, entropy is relentless, physics is closed, biology is stubborn and every atom is accounted for. 
+_Persistence_ is a high-fidelity Artificial Life (ALife) simulation engine built on the principles of non-equilibrium thermodynamics. Unlike traditional simulations that treat agents as abstract entities, Persistence treats life as a dissipative structure - a temporary pattern of matter that must constantly harvest energy and export entropy to survive. Individual agents in _Persistence_ will inevitably perish but life, as a whole, still tries to **persist**. In this universe, entropy is relentless, physics is closed, biology is stubborn, every atom is accounted for, every joule must be repaid. 
 
 ---
 
@@ -44,19 +44,19 @@ You merely set the constraints of the universe, let genesis happen, kick back an
    ```bash
    > python main.py
    ```
-   * **Headless Mode**: Simulation without visuals for efficient, high-speed data collection (faster).
+   * **Headless Mode**: Simulation without visuals for efficient data collection (faster).
    ```bash
    > python main.py --headless
    ```
    Your run will be logged in a separate folder in the `results/` folder with all the necessary metadata to reproduce the run and the tracked longitudinal data about the agent populations.
 
-1. **Analysis**: Use the provided utilities to process the logged data from your run in the `results/` folder.
+5. **Analysis**: Use the provided utilities to process the logged data from your run in the `results/` folder.
    ```bash
    > python utils/plot_results.py results/{your-run-folder}`
    ```
    The generated plots will be saved in the same folder.
    
-3. **Rendering**: You can render high quality videos of your stored simulations in _Persistence_ provided you have `ffmpeg` installed on your system. Download it  [here](https://www.ffmpeg.org/download.html) if you do not have it installed. There are currently two modes of rendering videos,
+6. **Rendering**: You can render high quality videos of your stored simulations in _Persistence_ provided you have `ffmpeg` installed on your system. Download it [here](https://www.ffmpeg.org/download.html) if you do not have it installed. There are currently two modes of rendering videos,
    
    * _Timelapse mode_: Allows you to render the entire simulation as a `.mp4` video based on a fixed frame render interval
    ```bash
@@ -66,11 +66,21 @@ You merely set the constraints of the universe, let genesis happen, kick back an
    ```bash
    > python utils/render.py results/{your-run-folder} timelapse <field> [start step] [duration]
    ```
-   The rendered videos will be saved in your run folder
+   The rendered videos will be saved in your run folder.
 ---
+## Hyper-parameters of the simulation (`config.py`)
+
+The `config.py` stores all the hyper-parameters (rules) of the universe. This is how 'The Observer' sets the constraints of the universe. Unless you are planning to modify the simulation, the `config.py` is the only file you need to interact with to set the universe. This file is heavily commented to improve the comprehension of the different parameters. A blog on _Persistence_ , which will have detailed commentary about the parameters, is coming soon. So check back often if you are interested!
+
+---
+
 ## Developer's Manifesto
 
-It is intended for climate awareness, thermodynamic education, and the exploration of emergent complexity. A meditative guide on the nature of persistence.
+This simulation is the developer's meditative guide on the nature of persistence. The focus is on the exploration of emergent complexity between a species and the world it inhabits, through simple parameters. Nothing is designed, anything that persists, it is because they earned it for a while. Realistic Thermodynamics is implemented in the simulation to maintain fidelity with biological life - a temporary, highly ordered, low entropy organization of matter against the friction of universal disorder through expenditure of energy. 
+
+The reduction of life to such mechanical and intangible terms might seem gloomy and dark, but the simulation actually represents a celebration of life and its fight against entropy. Entropy always wins, but life still tries and that is worth celebrating. 
+
+The simulation naturally dabbles between different relevant themes, including but not limited to, ecology, syntropy, competition, overconsumption, collapse and apocalypse. The Observer is encouraged to notice the parallels between the _Persistence_ universe and ours.
 
 ---
 ## License
@@ -80,4 +90,4 @@ Persistence is released under the **GNU GPL v3.0**. You are free to use, modify,
 ---
 ##  Contact
 
-* **Developer:** dev-persistence@proton.me
+* **Developer:** persistence-dev@proton.me
