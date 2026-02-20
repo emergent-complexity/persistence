@@ -4,7 +4,7 @@
 
 _Persistence_ is a high-fidelity Artificial Life (ALife) simulation engine built on the principles of non-equilibrium thermodynamics. Unlike traditional simulations that treat agents as abstract entities, Persistence treats life as a dissipative structure - a temporary pattern of matter that must constantly harvest energy and export entropy to survive. Individual agents in _Persistence_ will inevitably perish but life, as a whole, still tries to **persist**. In this universe, entropy is relentless, physics is closed, biology is stubborn, every atom is accounted for, every joule must be repaid. 
 
-![Screenshot](assets/hero_shot.png)
+![Screenshot](assets/heat_shot.png)
 ---
 
 ## The Core Features
