@@ -50,21 +50,23 @@ You merely set the constraints of the universe, let genesis happen, kick back an
 ## Usage & Execution
 1. **Running the Simulation**:
    You can run _Persistence_ in two primary modes. Every run is logged in a unique subfolder within results/ containing all metadata and longitudinal data needed for reproduction.
+   
    * **Live Mode**: Real-time visuals of the grid
-      ```bash
-      python main.py
-      ```
+   ```bash
+   python main.py
+   ```
    * **Headless Mode**: No visuals; optimized for high-speed data collection and long-term experiments.
-      ```bash
-      python main.py --headless
-      ``` 
+   ```bash
+   python main.py --headless
+   ``` 
 2. **Analysis**:
    Use the provided utilities to process and visualize the logged data from your simulation runs
    ```bash
    python utils/plot_results.py results/{your-run-folder}
    ```
    Generated plots will be saved directly into the specific run folder.
-   3. **Video Rendering** 
+
+3. **Video Rendering** 
    High-quality video rendering requires `ffmpeg`. If you don't have it, download it [here](https://www.ffmpeg.org/download.html)
       * _Timelapse Mode_: Renders the entire simulation based on a fixed frame interval
       ```bash
