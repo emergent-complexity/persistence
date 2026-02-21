@@ -48,7 +48,7 @@ You merely set the constraints of the universe, let genesis happen, kick back an
    pip install -r requirements.txt
    ```
 ## Usage & Execution
-1. **Running the Simulation**
+1. **Running the Simulation**:
    You can run _Persistence_ in two primary modes. Every run is logged in a unique subfolder within results/ containing all metadata and longitudinal data needed for reproduction.
    * **Live Mode**: Real-time visuals of the grid
       ```bash
@@ -58,24 +58,26 @@ You merely set the constraints of the universe, let genesis happen, kick back an
       ```bash
       python main.py --headless
       ``` 
-2. **Analysis**
-Use the provided utilities to process and visualize the logged data from your simulation runs
-```bash
-python utils/plot_results.py results/{your-run-folder}
-```
-Generated plots will be saved directly into the specific run folder.
-3. **Video Rendering** 
-High-quality video rendering requires `ffmpeg`. If you don't have it, download it [here](https://www.ffmpeg.org/download.html)
-   * _Timelapse Mode_: Renders the entire simulation based on a fixed frame interval
+2. **Analysis**:
+   Use the provided utilities to process and visualize the logged data from your simulation runs
    ```bash
-   python utils/render.py results/{your-run-folder} timelapse <field>
+   python utils/plot_results.py results/{your-run-folder}
    ```
-   * _Event Mode_: Renders a high-resolution window of a specific event.
-   ```bash
-   python utils/render.py results/{your-run-folder} event <field> [start_step] [duration]
-   ```
-The rendered `.mp4` files will be saved in the corresponding run folder.
+   Generated plots will be saved directly into the specific run folder.
+   3. **Video Rendering** 
+   High-quality video rendering requires `ffmpeg`. If you don't have it, download it [here](https://www.ffmpeg.org/download.html)
+      * _Timelapse Mode_: Renders the entire simulation based on a fixed frame interval
+      ```bash
+      python utils/render.py results/{your-run-folder} timelapse <field>
+      ```
+      * _Event Mode_: Renders a high-resolution window of a specific event.
+      ```bash
+      python utils/render.py results/{your-run-folder} event <field> [start_step] [duration]
+      ```
+   The rendered `.mp4` files will be saved in the corresponding run folder.
+
 ---
+
 ## Hyper-parameters of the simulation (`config.py`)
 
 The `config.py` stores all the hyper-parameters (rules) of the universe. This is how 'The Observer' sets the constraints of the universe. Unless you are planning to modify the simulation, the `config.py` is the only file you need to interact with to set the universe. This file is heavily commented to improve the comprehension of the different parameters. A blog on _Persistence_ , which will have detailed commentary about the parameters, is coming soon. So check back often if you are interested!
