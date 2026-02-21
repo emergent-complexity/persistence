@@ -28,46 +28,53 @@ You merely set the constraints of the universe, let genesis happen, kick back an
 * `config.py`: The universal constants for the simulation.
 * `main.py` : Entry point 
 ---
-## Installation & Usage
+## Installation & Setup
 
 1. Go to your terminal and clone the Repository in your destination folder:
    ```bash
-   > git clone https://github.com/emergent-complexity/persistence.git
-   > cd persistence
+   git clone https://github.com/emergent-complexity/persistence.git
+   cd persistence
    ```
-2. Use `conda` to create the environment and then activate it. This dependency on `conda` will be removed very shortly.
+2. Create a Virtual Environment.
    ```bash
-   > conda env create -f environment.yml
-   > conda activate persistence
+   python -m venv .venv
+   # Activate on Windows:
+   .venv\Scripts\activate
+   # Activate on Mac/Linux:
+   source .venv/bin/activate
    ```
-3. **Execution**: Once installed, you can run _Persistence_ using the default settings in different modes:
-   * **Live Mode**: Includes real-time visuals of the simulation (slower).
+3. Install dependencies
    ```bash
-   > python main.py
+   pip install -r requirements.txt
    ```
-   * **Headless Mode**: Simulation without visuals for efficient data collection (faster).
+## Usage & Execution
+1. **Running the Simulation**
+   You can run _Persistence_ in two primary modes. Every run is logged in a unique subfolder within results/ containing all metadata and longitudinal data needed for reproduction.
+   * **Live Mode**: Real-time visuals of the grid
+      ```bash
+      python main.py
+      ```
+   * **Headless Mode**: No visuals; optimized for high-speed data collection and long-term experiments.
+      ```bash
+      python main.py --headless
+      ``` 
+2. **Analysis**
+Use the provided utilities to process and visualize the logged data from your simulation runs
+```bash
+python utils/plot_results.py results/{your-run-folder}
+```
+Generated plots will be saved directly into the specific run folder.
+3. **Video Rendering** 
+High-quality video rendering requires `ffmpeg`. If you don't have it, download it [here](https://www.ffmpeg.org/download.html)
+   * _Timelapse Mode_: Renders the entire simulation based on a fixed frame interval
    ```bash
-   > python main.py --headless
+   python utils/render.py results/{your-run-folder} timelapse <field>
    ```
-   Your run will be logged in a separate folder in the `results/` folder with all the necessary metadata to reproduce the run and the tracked longitudinal data about the agent populations.
-
-5. **Analysis**: Use the provided utilities to process the logged data from your run in the `results/` folder.
+   * _Event Mode_: Renders a high-resolution window of a specific event.
    ```bash
-   > python utils/plot_results.py results/{your-run-folder}`
+   python utils/render.py results/{your-run-folder} event <field> [start_step] [duration]
    ```
-   The generated plots will be saved in the same folder.
-   
-6. **Rendering**: You can render high quality videos of your stored simulations in _Persistence_ provided you have `ffmpeg` installed on your system. Download it [here](https://www.ffmpeg.org/download.html) if you do not have it installed. There are currently two modes of rendering videos,
-   
-   * _Timelapse mode_: Allows you to render the entire simulation as a `.mp4` video based on a fixed frame render interval
-   ```bash
-   > python utils/render.py results/{your-run-folder} timelapse <field>
-   ```
-   * _Event mode_: Allows you to render high resolution video of a specific event in the simulation,
-   ```bash
-   > python utils/render.py results/{your-run-folder} timelapse <field> [start step] [duration]
-   ```
-   The rendered videos will be saved in your run folder.
+The rendered `.mp4` files will be saved in the corresponding run folder.
 ---
 ## Hyper-parameters of the simulation (`config.py`)
 
