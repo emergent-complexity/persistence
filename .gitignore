@@ -1,27 +1,46 @@
-# --- Simulation Data ---
-# We track the code, not the massive output files
+# --- Simulation Data & Replays ---
+# We keep the structure but ignore the weight
 results/*
 !results/.gitkeep
 archive/
 stored/
-
 REPLAY_BUFFER/
+
+# Media and Data Exports
 *.mp4
 *.gif
 *.csv
+*.png
+# Except for your hero image in the assets folder!
+!assets/*.png
 
-# --- Python Environment & Cache ---
+# --- Python Environment & Cleanliness ---
+# Specifically targeting the "Conda Puke" remnants and venv
+.venv/
+venv/
+env/
+ENV/
+bin/
+lib/
+include/
+share/
+pyvenv.cfg
+.python-version
+
+# Python Cache
 __pycache__/
 *.py[cod]
 *$py.class
-.env
-.venv/
-env/
-venv/
 .pytest_cache/
 
-# --- System & IDE ---
+# --- System & IDE Secrets ---
 .DS_Store
+Thumbs.db
 .vscode/
 .idea/
+*.sublime-project
+*.sublime-workspace
+
+# Jupyter remnants (Scrubbing the 'trash')
 .ipynb_checkpoints/
+*.ipynb
