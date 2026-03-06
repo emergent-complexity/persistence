@@ -14,7 +14,7 @@ config.py
 *.png
 # Except for your hero image in the assets folder!
 !assets/*.png
-
+!assets/*.gif
 # --- Python Environment & Cleanliness ---
 # Specifically targeting the "Conda Puke" remnants and venv
 .venv/
