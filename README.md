@@ -10,20 +10,19 @@
 
 ---
 
-<!-- Replace with your GIF once you have one -->
-<!-- ![Persistence in action](assets/demo.gif) -->
+![Persistence in action](assets/demo.gif)
 
 ---
 
 ## What is this?
 
-**Persistence** is a simulation of life - not a game, not an abstraction, but a physics-honest model of what it means to exist.
+**Persistence** is a simulation of life — not a game, not an abstraction, but a physics-honest model of what it means to exist.
 
-Every agent in this world is a dissipative structure: a temporary pocket of order that must constantly consume energy and export entropy just to stay alive. It eats, excretes, generates heat, ages, and eventually dies. No agent is coded to be clever. No behavior is designed. Everything you observe — competition, collapse, population booms, extinction cascades — emerges from the physics alone.
+Every agent in this world is a **dissipative structure**: a temporary pocket of order that must constantly consume energy and export entropy just to stay alive. It eats, excretes, generates heat, ages, and eventually dies. No agent is coded to be clever. No behavior is designed. Everything you observe — competition, collapse, population booms, extinction cascades — **emerges from the physics alone**.
 
 You are The Observer. You set the rules of the universe. Then you let go.
 
-This project explores themes that matter well beyond biology: **resource scarcity, ecological collapse, overconsumption, resilience, and the stubborn persistence of life against entropy.** Whether you're a scientist, a systems thinker, a philosopher, or just someone who finds these questions fascinating - this simulation is for you.
+This project explores themes that matter well beyond biology: **resource scarcity, ecological collapse, overconsumption, resilience, and the stubborn persistence of life against entropy.** Whether you're a scientist, a systems thinker, a philosopher, or just someone who finds these questions fascinating — this simulation is for you.
 
 ---
 
@@ -99,7 +98,7 @@ Press these keys while the simulation is running to change what you're looking a
 | `3` | Heat field |
 | `4` | Necromass (decomposing biomass) |
 
-*(Fields and Key bindings are configurable in `config.py`)*
+*(Key bindings are configurable in `config.py`)*
 
 ### Analysing a run
 
@@ -203,7 +202,7 @@ pytest tests/ -v   # verbose output
 
 *Persistence* is open-source under GPL v3. Contributions, experiments, and ideas are very welcome.
 
-- 💬 **Discussions** — share runs, ask questions, propose ideas
+- 💬 **Discussions** — *[link coming soon]* — share runs, ask questions, propose ideas
 - 🐛 **Bug reports** — open an issue
 - 🔬 **Contributions** — see [CONTRIBUTING.md](CONTRIBUTING.md)
 - 📧 **Contact** — [persistence-dev@proton.me](mailto:persistence-dev@proton.me)
@@ -219,6 +218,3 @@ Released under the [GNU GPL v3.0](LICENSE). Free to use, study, and modify — d
 ---
 
 *Entropy always wins. But life still tries. That's worth something.*
-
-
-
