@@ -21,22 +21,19 @@ def test_config():
     """
     Automatically reset config before each test.
     'autouse=True' means this runs for EVERY test without needing to request it.
-    
+
     This creates a safe test environment where we use a smaller grid and fewer steps.
     """
-    # Store original values
     original_grid = config.GRID_SIZE
     original_steps = config.MAX_STEPS_HEADLESS
     original_audit_interval = config.AUDIT_INTERVAL
-    
-    # Use test values (small and fast)
+
     config.GRID_SIZE = (20, 20)
     config.MAX_STEPS_HEADLESS = 100
-    config.AUDIT_INTERVAL = 50  # Run audits less frequently in tests
-    
-    yield  # Run the test with these config values
-    
-    # Restore originals after test completes
+    config.AUDIT_INTERVAL = 50
+
+    yield
+
     config.GRID_SIZE = original_grid
     config.MAX_STEPS_HEADLESS = original_steps
     config.AUDIT_INTERVAL = original_audit_interval
