@@ -5,6 +5,7 @@ results/*
 archive/
 stored/
 REPLAY_BUFFER/
+config.py
 
 # Media and Data Exports
 *.mp4
