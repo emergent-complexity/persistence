@@ -1,9 +1,13 @@
-import pandas as pd
-import matplotlib.pyplot as plt
+
 import os
 import sys
-import numpy as np
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
 import config
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+
 
 def apply_style(ax, title, ylabel, style):
     """Applies the chosen aesthetic to a subplot."""

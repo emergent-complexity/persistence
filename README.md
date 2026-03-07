@@ -16,7 +16,7 @@
 
 ## What is this?
 
-**Persistence** is a simulation of life — not a game, not an abstraction, but a physics-honest model of what it means to exist.
+**Persistence** is a simulation of life - not a game, not an abstraction, but a physics-honest model of what it means to exist.
 
 Every agent in this world is a **dissipative structure**: a temporary pocket of order that must constantly consume energy and export entropy just to stay alive. It eats, excretes, generates heat, ages, and eventually dies. No agent is coded to be clever. No behavior is designed. Everything you observe — competition, collapse, population booms, extinction cascades — **emerges from the physics alone**.
 
@@ -197,6 +197,15 @@ pytest tests/ -v   # verbose output
 ```
 
 ---
+## Gallery
+
+| | |
+|---|---|
+| ![](assets/gallery_1.png) | ![](assets/gallery_2.png) |
+| ![](assets/gallery_3.png) | ![](assets/gallery_4.png) |
+
+---
+
 
 ## Contributing & Community
 
