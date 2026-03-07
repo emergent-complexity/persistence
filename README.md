@@ -16,7 +16,7 @@
 
 ## What is this?
 
-**Persistence** is a simulation of life - not a game, not an abstraction, but a physics-honest model of what it means to exist.
+**Persistence** is a simulation of life — not a game, not an abstraction, but a physics-honest model of what it means to exist.
 
 Every agent in this world is a **dissipative structure**: a temporary pocket of order that must constantly consume energy and export entropy just to stay alive. It eats, excretes, generates heat, ages, and eventually dies. No agent is coded to be clever. No behavior is designed. Everything you observe — competition, collapse, population booms, extinction cascades — **emerges from the physics alone**.
 
@@ -199,10 +199,16 @@ pytest tests/ -v   # verbose output
 ---
 ## Gallery
 
-| | |
-|---|---|
-| ![](assets/gallery_1.png) | ![](assets/gallery_2.png) |
-| ![](assets/gallery_3.png) | ![](assets/gallery_4.png) |
+<table>
+  <tr>
+    <td><img src="assets/gallery_1.png" width="420"/></td>
+    <td><img src="assets/gallery_2.png" width="420"/></td>
+  </tr>
+  <tr>
+    <td><img src="assets/gallery_3.png" width="420"/></td>
+    <td><img src="assets/gallery_4.png" width="420"/></td>
+  </tr>
+</table>
 
 ---
 
@@ -211,7 +217,7 @@ pytest tests/ -v   # verbose output
 
 *Persistence* is open-source under GPL v3. Contributions, experiments, and ideas are very welcome.
 
-- 💬 **Discussions** — *[link coming soon]* — share runs, ask questions, propose ideas
+- 💬 **Discussions** — [Join the conversation](https://github.com/emergent-complexity/persistence/discussions) — share runs, ask questions, propose ideas
 - 🐛 **Bug reports** — open an issue
 - 🔬 **Contributions** — see [CONTRIBUTING.md](CONTRIBUTING.md)
 - 📧 **Contact** — [persistence-dev@proton.me](mailto:persistence-dev@proton.me)
