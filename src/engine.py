@@ -13,6 +13,7 @@ import numpy as np
 from src.logger import DataLogger
 from src.biology import Agent, Genome
 from src.environment import FieldManager,SourceController
+
 class Simulation:
     def __init__(self, seed, logger, run_name=None):
         
@@ -288,31 +289,3 @@ class Simulation:
         # Merge species-specific data into the main log
         log_data.update(species_stats)
         self.logger.log_step(log_data)
-
-    @classmethod
-    def from_history(cls, run_folder):
-        """Reconstructs a simulation instance from a past run's metadata."""
-        import json
-        meta_path = os.path.join(run_folder, "metadata.json")
-        
-        with open(meta_path, 'r') as f:
-            meta = json.load(f)
-            
-        # 1. Temporarily set the global seed BEFORE creating the instance
-        # This ensures any random calls inside __init__ match the history
-        active_seed = meta['seed']
-        np.random.seed(active_seed)
-        
-        # 2. Create instance (This will run __init__ and _seed_species)
-        sim = cls(run_name=f"Replay_{meta['run_id']}")
-        
-        # 3. Explicitly ensure the instance seed matches
-        sim.active_seed = active_seed
-        
-        # NOTE: We no longer need to manually reset agents and re-call _seed_species
-        # because the __init__ call above already did it using the freshly set seed.
-            
-        print(f"--- Replay Initialized from Seed: {sim.active_seed} ---")
-        return sim
-    
-    # ... (Include check_mass_integrity, check_energy_integrity, save_audit_report here) ...

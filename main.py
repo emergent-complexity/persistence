@@ -34,17 +34,8 @@ if __name__ == "__main__":
     if "--headless" in args:
         run_headless(this_seed, "Headless_Run")
     elif "--replay" in args:
-        try:
-            folder_path = sys.argv[sys.argv.index("--replay") + 1]
-            sim = Simulation.from_history(folder_path)
-            viz = Visualizer(sim)
-            print(f"🎬 Recording replay for: {folder_path}")
-            viz.show(save_gif=True, folder=folder_path)
-            # Run a final audit on the replayed end-state
-            sim.check_mass_integrity() 
-        except (IndexError, ValueError):
-            print("❌ Error: Provide a path! Usage: python main.py --replay Results/Run_Folder")
-        pass
+        print("❌ --replay is not currently supported. Use the renderer instead:")
+        print("   python utils/render.py results/<your-run-folder> timelapse <field>")
     else:
         logger = DataLogger(run_name="Live_Run", seed=this_seed)
         sim = Simulation(this_seed, logger)
